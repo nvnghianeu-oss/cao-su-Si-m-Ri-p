@@ -14,10 +14,7 @@
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-brand">
     <div class="brand-icon">🌿</div>
-    <div class="brand-text">
-      <div class="brand-name">CAO SU</div>
-      <div class="brand-sub">SIÊM RIỆP · TỔ 5</div>
-    </div>
+    <div class="brand-text"><div class="brand-name">CAO SU</div><div class="brand-sub">SIÊM RIỆP · TỔ 5</div></div>
   </div>
   <nav class="sidebar-nav">
     <button class="nav-item active" data-page="p-tongquan"><span class="nav-icon">📊</span><span class="nav-label">Tổng Quan Điều Hành</span></button>
@@ -42,103 +39,61 @@
       <div class="topbar-badge yellow" id="tb-hs">—%</div>
     </div>
   </header>
-
   <div class="loading-overlay" id="loading-overlay">
-    <div class="loading-spinner">
-      <div class="spinner-ring"></div>
-      <div class="loading-text">Đang kết nối Google Sheets...<br><small>Lần đầu có thể mất 5–10 giây</small></div>
-    </div>
+    <div class="loading-spinner"><div class="spinner-ring"></div><div class="loading-text">Đang kết nối Google Sheets...<br><small>Lần đầu có thể mất 5–10 giây</small></div></div>
   </div>
-
   <div class="error-banner" id="error-banner" style="display:none">
-    <span id="error-msg"></span>
-    <button onclick="document.getElementById('error-banner').style.display='none'">✕</button>
+    <span id="error-msg"></span><button onclick="document.getElementById('error-banner').style.display='none'">✕</button>
   </div>
 
-  <!-- ═══ PAGE 0: TỔNG QUAN ĐIỀU HÀNH ═══ -->
+  <!-- ═══ PAGE 0: TỔNG QUAN ═══ -->
   <section class="page active" id="p-tongquan">
+    <!-- KPI Row 1 -->
     <div class="kpi-grid kpi-4" style="margin-bottom:10px">
       <div class="kpi-card accent-green">
         <div class="kpi-icon">🌿</div>
-        <div class="kpi-body">
-          <div class="kpi-label">Tổng Mủ Tươi TT</div>
-          <div class="kpi-value" id="tq-sl">—</div>
-          <div class="kpi-sub" id="tq-sl-pct">— KH</div>
-          <div class="kpi-sub" id="tq-sl-diff"></div>
-        </div>
+        <div class="kpi-body"><div class="kpi-label">Tổng Mủ Tươi TT</div><div class="kpi-value" id="tq-sl">—</div><div class="kpi-sub" id="tq-sl-pct">—</div><div class="kpi-sub" id="tq-sl-diff"></div></div>
       </div>
       <div class="kpi-card accent-orange">
         <div class="kpi-icon">🎯</div>
-        <div class="kpi-body">
-          <div class="kpi-label">Kế Hoạch Tháng</div>
-          <div class="kpi-value" id="tq-kh">—</div>
-          <div class="kpi-sub">Mủ tươi tháng 5</div>
-        </div>
+        <div class="kpi-body"><div class="kpi-label">Kế Hoạch Tháng</div><div class="kpi-value" id="tq-kh">—</div><div class="kpi-sub">Mủ tươi tháng 5</div></div>
       </div>
       <div class="kpi-card accent-orange">
         <div class="kpi-icon">💰</div>
-        <div class="kpi-body">
-          <div class="kpi-label">Tổng Quỹ Lương</div>
-          <div class="kpi-value" id="tq-luong">—</div>
-          <div class="kpi-sub">Riel tháng 5</div>
-        </div>
+        <div class="kpi-body"><div class="kpi-label">Tổng Quỹ Lương</div><div class="kpi-value" id="tq-luong">—</div><div class="kpi-sub">Riel tháng 5</div></div>
       </div>
       <div class="kpi-card accent-blue">
         <div class="kpi-icon">⚡</div>
-        <div class="kpi-body">
-          <div class="kpi-label">Lương / kg Mủ</div>
-          <div class="kpi-value" id="tq-luong-kg">—</div>
-          <div class="kpi-sub">Chi phí lao động</div>
-        </div>
+        <div class="kpi-body"><div class="kpi-label">Lương / kg Mủ</div><div class="kpi-value" id="tq-luong-kg">—</div><div class="kpi-sub">Chi phí lao động</div></div>
       </div>
     </div>
+    <!-- KPI Row 2 -->
     <div class="kpi-grid kpi-4" style="margin-bottom:14px">
       <div class="kpi-card accent-yellow">
         <div class="kpi-icon">📈</div>
-        <div class="kpi-body">
-          <div class="kpi-label">Năng Suất LĐ</div>
-          <div class="kpi-value" id="tq-kg-nc">—</div>
-          <div class="kpi-sub">kg / ngày công</div>
-        </div>
+        <div class="kpi-body"><div class="kpi-label">Năng Suất LĐ</div><div class="kpi-value" id="tq-kg-nc">—</div><div class="kpi-sub">kg / ngày công</div></div>
       </div>
       <div class="kpi-card accent-green">
         <div class="kpi-icon">✅</div>
-        <div class="kpi-body">
-          <div class="kpi-label">CN Đạt Kế Hoạch</div>
-          <div class="kpi-value" id="tq-cn-dat">—</div>
-          <div class="kpi-sub" id="tq-cn-dat-pct">—</div>
-        </div>
+        <div class="kpi-body"><div class="kpi-label">CN Đạt Kế Hoạch</div><div class="kpi-value" id="tq-cn-dat">—</div><div class="kpi-sub" id="tq-cn-dat-pct">—</div></div>
       </div>
       <div class="kpi-card accent-red">
         <div class="kpi-icon">⚠️</div>
-        <div class="kpi-body">
-          <div class="kpi-label">CN Hiệu Suất &lt;85%</div>
-          <div class="kpi-value" id="tq-cn-duoi">—</div>
-          <div class="kpi-sub">Cần theo dõi</div>
-        </div>
+        <div class="kpi-body"><div class="kpi-label">CN Hiệu Suất &lt;85%</div><div class="kpi-value" id="tq-cn-duoi">—</div><div class="kpi-sub">Cần theo dõi</div></div>
       </div>
       <div class="kpi-card accent-yellow">
         <div class="kpi-icon">📅</div>
-        <div class="kpi-body">
-          <div class="kpi-label">CN Chuyên Cần Thấp</div>
-          <div class="kpi-value" id="tq-cn-nghi">—</div>
-          <div class="kpi-sub">Dưới 25 ngày CT</div>
-        </div>
+        <div class="kpi-body"><div class="kpi-label">CN Chuyên Cần Thấp</div><div class="kpi-value" id="tq-cn-nghi">—</div><div class="kpi-sub">Dưới 25 ngày CT</div></div>
       </div>
     </div>
 
-    <!-- Executive Summary -->
-    <div class="chart-card" style="margin-bottom:14px">
-      <div class="chart-title">📝 TÓM TẮT ĐIỀU HÀNH <span>Tự động · Tháng 5/2026</span></div>
-      <div id="tq-summary" class="summary-block"></div>
-    </div>
-
-    <div class="charts-row" style="margin-bottom:14px">
-      <div class="chart-card flex-2">
-        <div class="chart-title">PHÂN PHỐI HIỆU SUẤT TOÀN TỔ <span>Xanh ≥100% · Vàng 85–100% · Đỏ &lt;85%</span></div>
-        <div class="chart-wrap h240"><canvas id="c-tq-hs"></canvas></div>
+    <!-- Summary + Warnings side by side -->
+    <div class="tq-two-col">
+      <div class="chart-card">
+        <div class="chart-title">📝 TÓM TẮT ĐIỀU HÀNH <span>Tự động · Tháng 5/2026</span></div>
+        <div id="tq-summary" class="summary-block"></div>
       </div>
-      <div class="chart-card flex-1">
+      <div class="chart-card">
         <div class="chart-title">⚠️ CẢNH BÁO CẦN XỬ LÝ</div>
         <div id="tq-warnings" class="warnings-block"></div>
       </div>
@@ -151,10 +106,8 @@
       <div class="filter-group"><label>Tuần</label>
         <select id="f-week" onchange="renderChamCong()">
           <option value="all">Cả tháng 5</option>
-          <option value="1">Tuần 1 (01–07)</option>
-          <option value="2">Tuần 2 (08–15)</option>
-          <option value="3">Tuần 3 (16–22)</option>
-          <option value="4">Tuần 4 (23–31)</option>
+          <option value="1">Tuần 1 (01–07)</option><option value="2">Tuần 2 (08–15)</option>
+          <option value="3">Tuần 3 (16–22)</option><option value="4">Tuần 4 (23–31)</option>
         </select>
       </div>
       <div class="filter-group"><label>Công nhân</label><select id="f-worker"><option value="all">Tất cả</option></select></div>
@@ -185,13 +138,10 @@
     <div class="section-head"><span>THỐNG KÊ NGÀY CÔNG</span></div>
     <div class="table-wrap">
       <table class="dt">
-        <thead><tr>
-          <th>#</th><th>Họ Tên CN</th><th class="r">Tổng</th><th class="r">CT</th>
-          <th class="r">DB</th><th class="r">MB</th><th class="c">Chuyên Cần</th>
-          <th class="r">Mủ Tươi (kg)</th><th class="r">Mất SL Ước Tính</th>
-        </tr></thead>
+        <thead><tr><th>#</th><th>Họ Tên CN</th><th class="r">Tổng</th><th class="r">CT</th><th class="r">DB</th><th class="r">MB</th><th class="c">Chuyên Cần</th><th class="r">Mủ Tươi (kg)</th><th class="r">Mất SL Ước Tính</th></tr></thead>
         <tbody id="tb-att"></tbody>
       </table>
+      <div id="pager-att"></div>
     </div>
   </section>
 
@@ -213,13 +163,10 @@
       <div class="kpi-card accent-blue"><div class="kpi-icon">📊</div><div class="kpi-body"><div class="kpi-label">TB Mủ / Ngày Cạo</div><div class="kpi-value" id="k2-avg">—</div><div class="kpi-sub">Ngày có thu hoạch</div></div></div>
       <div class="kpi-card accent-yellow"><div class="kpi-icon">👤</div><div class="kpi-body"><div class="kpi-label">TB Mủ / CN / Tháng</div><div class="kpi-value" id="k2-per-cn">—</div><div class="kpi-sub">29 công nhân</div></div></div>
     </div>
-
-    <!-- Executive Insight -->
     <div class="chart-card" style="margin-bottom:12px">
       <div class="chart-title">📌 INSIGHT SẢN LƯỢNG</div>
       <div id="sl-insight" class="insight-block"></div>
     </div>
-
     <div class="progress-card">
       <div class="progress-card-header"><span class="progress-title">TIẾN ĐỘ VS KẾ HOẠCH</span><span class="progress-pct" id="prog-pct">—</span></div>
       <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
@@ -229,13 +176,11 @@
         <span id="prog-diff-label"></span>
       </div>
     </div>
-
     <div class="charts-row">
-      <div class="chart-card flex-2"><div class="chart-title">SẢN LƯỢNG MỦ TƯƠI THEO NGÀY</div><div class="chart-wrap h240"><canvas id="c-sl-daily"></canvas></div></div>
+      <div class="chart-card flex-2"><div class="chart-title">SẢN LƯỢNG MỦ TƯƠI THEO NGÀY <span>Ngày có thu hoạch</span></div><div class="chart-wrap h240"><canvas id="c-sl-daily"></canvas></div></div>
       <div class="chart-card flex-1"><div class="chart-title">PHÂN BỐ CN THEO MỨC SL</div><div class="chart-wrap h240 center-content"><canvas id="c-sl-dist" style="max-width:200px"></canvas></div></div>
     </div>
     <div class="chart-card" style="margin-bottom:14px"><div class="chart-title">SẢN LƯỢNG TỪNG CN — KH vs TT</div><div class="chart-wrap h280"><canvas id="c-sl-worker"></canvas></div></div>
-
     <div class="section-head"><span>BẢNG SẢN LƯỢNG CHI TIẾT</span></div>
     <div class="table-wrap">
       <table class="dt">
@@ -245,7 +190,7 @@
     </div>
   </section>
 
-  <!-- ═══ PAGE 3: HIỆU SUẤT & LƯƠNG ═══ -->
+  <!-- ═══ PAGE 3: LƯƠNG ═══ -->
   <section class="page" id="p-luong">
     <div class="filter-bar">
       <div class="filter-group"><label>Sắp xếp</label>
@@ -260,7 +205,7 @@
         <select id="f-l-hs" onchange="renderLuong()">
           <option value="all">Tất cả</option>
           <option value="over">Đạt KH (≥100%)</option>
-          <option value="under">Chưa đạt (&lt;100%)</option>
+          <option value="under">Chưa đạt</option>
         </select>
       </div>
       <div class="filter-group"><label>Hạng KT</label>
@@ -271,7 +216,6 @@
         </select>
       </div>
     </div>
-
     <div class="kpi-grid kpi-5">
       <div class="kpi-card accent-orange"><div class="kpi-icon">💰</div><div class="kpi-body"><div class="kpi-label">Tổng Quỹ Lương</div><div class="kpi-value" id="k3-total">—</div><div class="kpi-sub">Riel tháng 5</div></div></div>
       <div class="kpi-card accent-green"><div class="kpi-icon">👤</div><div class="kpi-body"><div class="kpi-label">Lương TB / CN</div><div class="kpi-value" id="k3-avg">—</div><div class="kpi-sub">Riel / người</div></div></div>
@@ -279,35 +223,22 @@
       <div class="kpi-card accent-blue"><div class="kpi-icon">📊</div><div class="kpi-body"><div class="kpi-label">Hiệu Suất TB Tổ</div><div class="kpi-value" id="k3-hs-avg">—</div><div class="kpi-sub">TT / KH toàn tổ</div></div></div>
       <div class="kpi-card accent-blue"><div class="kpi-icon">⚡</div><div class="kpi-body"><div class="kpi-label">Lương / kg Mủ</div><div class="kpi-value" id="k3-luong-kg">—</div><div class="kpi-sub">Chi phí lao động</div></div></div>
     </div>
-
     <div class="charts-row">
       <div class="chart-card flex-1"><div class="chart-title">PHÂN PHỐI HIỆU SUẤT</div><div class="chart-wrap h250"><canvas id="c-hs-bar"></canvas></div></div>
       <div class="chart-card flex-1"><div class="chart-title">CƠ CẤU LƯƠNG TRUNG BÌNH</div><div class="chart-wrap h250 center-content"><canvas id="c-luong-pie" style="max-width:220px"></canvas></div></div>
     </div>
-
     <div class="charts-row">
       <div class="chart-card flex-2"><div class="chart-title">TỔNG LƯƠNG TỪNG CN <span>Stacked · Riel</span></div><div class="chart-wrap h240"><canvas id="c-luong-bar"></canvas></div></div>
-      <div class="chart-card flex-1"><div class="chart-title">LƯƠNG vs SẢN LƯỢNG <span>Scatter · Xanh=đạt KH</span></div><div class="chart-wrap h240"><canvas id="c-luong-scatter"></canvas></div></div>
+      <div class="chart-card flex-1"><div class="chart-title">LƯƠNG vs SẢN LƯỢNG <span>Xanh=đạt KH</span></div><div class="chart-wrap h240"><canvas id="c-luong-scatter"></canvas></div></div>
     </div>
-
     <div class="section-head"><span>BẢNG LƯƠNG CHI TIẾT</span><div id="k3-total-display" style="font-size:13px;font-weight:700;color:var(--orange)"></div></div>
     <div class="table-wrap">
       <table class="dt">
-        <thead><tr>
-          <th>#</th><th>Họ Tên CN</th><th class="r">Ngày Công</th>
-          <th class="r">Tiền CC (R)</th><th class="r">Mủ Tươi</th>
-          <th class="r">Tiền SL (R)</th><th class="c">Hạng</th>
-          <th>Hiệu Suất</th><th class="r">R/kg</th><th class="r">TỔNG LƯƠNG (R)</th>
-        </tr></thead>
+        <thead><tr><th>#</th><th>Họ Tên CN</th><th class="r">Ngày Công</th><th class="r">Tiền CC (R)</th><th class="r">Mủ Tươi</th><th class="r">Tiền SL (R)</th><th class="c">Hạng</th><th>Hiệu Suất</th><th class="r">R/kg</th><th class="r">TỔNG LƯƠNG (R)</th></tr></thead>
         <tbody id="tb-luong"></tbody>
-        <tfoot><tr class="tfoot-row">
-          <td colspan="2">TỔNG TỔ</td>
-          <td class="r" id="ft-cong"></td><td class="r" id="ft-cc"></td>
-          <td class="r" id="ft-mu"></td><td class="r" id="ft-sl"></td>
-          <td></td><td></td><td></td>
-          <td class="r" id="ft-luong"></td>
-        </tr></tfoot>
+        <tfoot><tr class="tfoot-row"><td colspan="2">TỔNG TỔ</td><td class="r" id="ft-cong"></td><td class="r" id="ft-cc"></td><td class="r" id="ft-mu"></td><td class="r" id="ft-sl"></td><td></td><td></td><td></td><td class="r" id="ft-luong"></td></tr></tfoot>
       </table>
+      <div id="pager-luong"></div>
     </div>
   </section>
 </div>
